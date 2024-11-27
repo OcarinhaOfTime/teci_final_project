@@ -1,0 +1,1 @@
+The staff attack system comprises a master controller, corridor display units, call buttons, indicators and sounders, and all necessary control equipment, power supplies, cabling, and data connections.
