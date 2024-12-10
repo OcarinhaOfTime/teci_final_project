@@ -1,5 +1,11 @@
+Using the data exclusively from the section 'Information', answer the asked question, telling from which document and page it was obtained.
+Use a json format as your reply, using the provided template.
+
+# Question
 {query}
 
-Answer using the information bellow exclusevely.
+# Answer Template
+{ans_template}
 
+# Information
 {info}

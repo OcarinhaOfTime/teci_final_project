@@ -1,3 +1,4 @@
 auth/
 BData/
 tmp/
+src/__pycache__/
