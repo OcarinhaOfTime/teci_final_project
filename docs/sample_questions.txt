@@ -1,0 +1,3 @@
+what is the required wire type for small power?
+
+What is the maximum rating for RCBO's in the small power system?
