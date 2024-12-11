@@ -18,6 +18,11 @@ class Rag:
     def log_data(self, txt):
         open(f'../logs/{self.ts}_data.txt', 'a+').write(txt + '\n')
 
+    def compose_query_transform(self, query):
+        template = open('../metadata/query_transform_template.md').read()
+        prompt = template.format(query=query)
+        return prompt
+
     def compose_info(self, db_answer):
         info = ''
         for _, doc, page, txt, _ in db_answer:
@@ -49,11 +54,23 @@ class Rag:
         if m is None:
             return txt
         
-        return m.group(1).strip()        
+        return m.group(1).strip()    
+
+    def generate_sample_answer(self, query):
+        print('Generating sample answer...')
+        prompt = self.compose_query_transform(query)
+        answer = gemini.ask(prompt)
+        print(answer)
+
+        return answer    
 
     def execute(self, query):
         self.log('Creating embedding...')
-        emb = gemini.create_embedding(query)
+        trans_query = self.generate_sample_answer(query)
+
+        self.log(trans_query)
+
+        emb = gemini.create_embedding(trans_query)
         self.log('semantic search...')
         db_answer = db.semantic_search(emb, self.context_size)
         prompt = self.compose_prompt(query, db_answer)
@@ -69,7 +86,10 @@ class Rag:
         self.log(answer)
 
 
-query = 'What is the maximum rating for RCBO in the small power system?'
-query = 'What are the two programming methods used for QUANTEC?'
-rag = Rag()
-rag.execute(query)
+if __name__ == "__main__":
+
+    query = 'What is the maximum rating for RCBO in the small power system?'
+    query = 'What are the two programming methods used for QUANTEC?'
+    rag = Rag()
+    rag.execute(query)
+    rag.generate_sample_answer(query)

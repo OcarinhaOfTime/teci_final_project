@@ -1,0 +1,8 @@
+* Estrutura apresentacao
+    - analise de dados
+    - estrutura do projeto
+    - rag
+    - demonstracao
+    - metricas
+    - limitacao, problemas dificuldades trabalho futuro
+    - PoC planos para melhora, sistema de avaliacao

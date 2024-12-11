@@ -1,0 +1,5 @@
+* criar um script para instanciar db e processar
+* criar servidar para integrar com blip
+* validacao para respostas enroladas do gemini
+* metricas
+* apresentacao/relatorio

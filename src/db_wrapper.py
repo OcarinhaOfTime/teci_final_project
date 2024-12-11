@@ -24,5 +24,4 @@ def insert(doc, page, emb, txt):
 
 def semantic_search(emb, lim=10):
     query = f"SELECT * FROM bcorpus ORDER BY embedding <-> '{emb}' LIMIT {lim};"
-
     return execute_query(query, fetch=True)

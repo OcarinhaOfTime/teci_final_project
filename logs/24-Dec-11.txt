@@ -1,220 +1,51 @@
 Creating embedding...
-semantic search...
-data used:
+The maximum rated current for RCBOs (Residual Current Circuit Breakers with Overcurrent protection) within the small power system is determined by several factors, including but not limited to the upstream protective device capacity, the wiring system's current-carrying capacity, and the specific requirements of the connected load.  While individual RCBO units may have diverse maximum current ratings (e.g., 6A, 10A, 16A, 20A, etc.), the system's overall design dictates the upper limit applicable within the defined small power system architecture.  This specification outlines a maximum allowable RCBO rating of 20A for all branch circuits within the system, excluding dedicated circuits for high-power appliances specified separately in Appendix B.
 
-## Document 0, Page 22
-
-
-## Document 2, Page 579
+This 20A limit is established based on the capacity of the main distribution board's protective device (a 30A MCB), ensuring adequate protection against overcurrent faults while allowing for a safety margin.  Exceeding this limit risks overloading the circuit and potentially triggering nuisance tripping of the upstream protective device. Selection of RCBOs must adhere to the IEC 61008-1 standard and local electrical codes.  Furthermore,  derating factors must be considered, particularly in environments with elevated temperatures or where multiple RCBOs are installed within a single enclosure, as detailed in section 4.3.2 of this document.  Improper selection of RCBO ratings can lead to compromised safety and potential system failure.
 
 
-## Document 2, Page 152
+Compliance with the specified 20A maximum RCBO rating is critical for ensuring the safe and reliable operation of the small power system. Any deviations from this requirement necessitate a comprehensive risk assessment and written justification, which must be approved by the designated electrical engineer before implementation.  The selection and installation of RCBOs must be carried out by qualified personnel adhering to all relevant safety regulations and best practices.
 
-
-## Document 2, Page 588
-
-
-## Document 2, Page 384
-
-
-## Document 2, Page 591
-
-
-## Document 2, Page 190
-
-
-## Document 2, Page 587
-
-
-## Document 2, Page 568
-
-
-## Document 2, Page 458
-
-
-## Document 2, Page 457
-
-
-## Document 2, Page 461
-
-
-## Document 2, Page 66
-
-
-## Document 2, Page 445
-
-
-## Document 2, Page 9
-
-
-## Document 2, Page 104
-
-
-## Document 2, Page 153
-
-
-## Document 2, Page 428
-
-
-## Document 2, Page 185
-
-
-## Document 2, Page 575
-
-
-Asking gemini...
-Creating embedding...
-semantic search...
-data used:
-    Doc  Page
-0     0    21
-1     2   578
-2     2   151
-3     2   587
-4     2   383
-5     2   590
-6     2   189
-7     2   586
-8     2   567
-9     2   457
-10    2   456
-11    2   460
-12    2    65
-13    2   444
-14    2     8
-15    2   103
-16    2   152
-17    2   427
-18    2   184
-19    2   574
-Asking gemini...
-Creating embedding...
-semantic search...
-data used:
-    Doc  Page
-0     0    22
-1     2   579
-2     2   152
-3     2   588
-4     2   384
-5     2   591
-6     2   190
-7     2   587
-8     2   568
-9     2   458
-10    2   457
-11    2   461
-12    2    66
-13    2   445
-14    2     9
-15    2   104
-16    2   153
-17    2   428
-18    2   185
-19    2   575
-20    2   127
-21    2   143
-22    2    26
-23    2   186
-24    2   206
-25    2    46
-26    2   468
-27    2   467
-28    2   465
-29    2    32
-Asking gemini...
-Creating embedding...
 semantic search...
 data used:
    Doc  Page
-0    0    22
-1    2   579
-2    2   152
-3    2   588
-4    2   384
-5    2   591
-6    2   190
-7    2   587
-8    2   568
-9    2   458
-Asking gemini...
-Creating embedding...
-semantic search...
-data used:
-   Doc  Page
-0    0    22
-1    2   579
-2    2   152
-3    2   588
-4    2   384
-5    2   591
-6    2   190
-7    2   587
-8    2   568
-9    2   458
+0    2   543
+1    2    68
+2    0    26
+3    2   542
+4    2    88
+5    2    86
+6    2    75
+7    2    74
+8    2   544
+9    2    69
 Asking gemini...
 received answer
 {
-  "page": 22,
+  "page": 26,
   "doc": 0,
-  "answer": "The provided text mentions that the CTEC Quantec system has been adapted to provide a bespoke solution for the RUH by the manufacturer.  The system uses a QT601-2 master control panel, which is the processor for the system and controls a Quantec Addressable Call System.  Therefore, the two programming methods are not explicitly stated, but it can be inferred that one is related to the QT601-2 master control panel and the other is related to the Quantec Addressable Call System."
+  "answer": "30mA"
 }
 Creating embedding...
-semantic search...
-data used:
-   Doc  Page
-0    0    22
-1    2   579
-2    2   152
-3    2   588
-4    2   384
-5    2   591
-6    2   190
-7    2   587
-8    2   568
-9    2   458
-Asking gemini...
-received answer
-{
-  "page": 22,
-  "doc": 0,
-  "answer": "The provided text mentions that the CTEC Quantec system has been adapted to provide a bespoke solution, and it comprises a QT601-2 master control panel that is the processor for the system and controls a Quantec Addressable Call System.  Therefore, the two programming methods are not explicitly stated, but it is implied that there is a master control panel programming method and an addressable call system programming method."
-}
-Creating embedding...
-semantic search...
-data used:
-   Doc  Page
-0    0    22
-1    2   579
-2    2   152
-3    2   588
-4    2   384
-5    2   591
-6    2   190
-7    2   587
-8    2   568
-9    2   458
-Asking gemini...
-received answer
-{
-  "page": 22,
-  "doc": 0,
-  "answer": "The provided text mentions that the CTEC Quantec system has been adapted to provide a bespoke solution for the RUH.  The system uses a QT601-2 master control panel and a Quantec Addressable Call System."
-}
-Creating embedding...
+The maximum rated current for RCBOs (Residual Current Breakers with Overcurrent protection) employed within the small power system is dictated by several interconnected factors, most significantly the upstream protective device rating and the system's wiring capacity.  While individual RCBO units may be available with ratings exceeding 63A, their integration into the small power system is constrained.  The system's main protective device (e.g., a miniature circuit breaker or fuse) will typically possess a lower current rating, limiting the overall maximum RCBO rating permissible on any given branch circuit.  Exceeding this upstream limit risks the failure of the main protection device before the RCBO can operate, jeopardizing system integrity and potentially causing fire hazards.
+
+Furthermore, the maximum permissible RCBO rating is also determined by the conductor size and type within the protected circuit.  The chosen RCBO must conform to the current-carrying capacity of the wiring, as detailed in relevant electrical codes (e.g., IEC 60364, NEC).  Using an RCBO with a higher rating than the wiring allows can lead to overheating, insulation degradation, and ultimately, fire risks.  Therefore, the selection of an appropriate RCBO rating requires careful consideration of both upstream protection and downstream wiring limitations.  In the majority of small power system configurations, a maximum RCBO rating of 40A is commonly encountered, though lower ratings (e.g., 16A, 20A, 32A) are far more prevalent for typical lighting and appliance circuits.
+
+Consequently, determining the absolute maximum RCBO rating for the small power system necessitates a complete system analysis.  This should encompass a review of the main protective device specifications, a detailed calculation of circuit current demands based on connected loads, and verification against relevant wiring capacity standards. Only after a comprehensive assessment can a definitive maximum RCBO rating be established for each specific branch circuit within the overall small power system architecture.  Consult relevant electrical codes and standards for precise guidance on the selection of protective devices in relation to the specific application.
+
 semantic search...
 data used:
    Doc  Page
 0    2   543
 1    0    26
-2    0    28
-3    0    10
-4    2    68
-5    2    86
-6    2    88
-7    2   544
-8    2    74
-9    2   542
+2    2    68
+3    2   542
+4    0    10
+5    2    88
+6    2   544
+7    2    74
+8    2    22
+9    2   428
 Asking gemini...
 received answer
 {
@@ -223,44 +54,28 @@ received answer
   "answer": "The rating of RCBOs does not exceed 30mA for residual currents."
 }
 Creating embedding...
-semantic search...
-data used:
-   Doc  Page
-0    2   543
-1    0    26
-2    0    28
-3    0    10
-4    2    68
-5    2    86
-6    2    88
-7    2   544
-8    2    74
-9    2   542
-Asking gemini...
-received answer
-{
-  "page": 26,
-  "doc": 0,
-  "answer": "The rating of RCBOs does not exceed 30mA for residual currents."
-}
 Creating embedding...
+QUANTEC utilizes two distinct programming methods to facilitate diverse application development and user interaction:  a low-level, register-based approach and a higher-level, abstracted scripting language.  The register-based method, detailed in Section 3.2.1, offers granular control over the QUANTEC hardware architecture, enabling optimization for performance-critical tasks such as quantum algorithm execution and real-time system management.  This approach requires intimate knowledge of the underlying quantum processor architecture and necessitates programming using the provided QUANTEC Assembly Language (QAL).  QAL instructions directly manipulate quantum registers, qubits, and ancillary resources.
+
+Conversely, the higher-level scripting interface, documented in Section 3.2.2, provides a more user-friendly environment suitable for rapid prototyping and less hardware-intensive applications.  This interface, implemented using the Python-based QUANTEC Scripting API (QSA), allows developers to abstract away from low-level register manipulation, focusing instead on higher-level constructs and functions.  QSA offers pre-built functions for common quantum operations, simplifying development and reducing the likelihood of low-level errors.  While less efficient than the register-based approach for computationally demanding tasks, QSA dramatically reduces development time and complexity for many applications.  Interoperability between the two methods is supported, allowing developers to combine the strengths of both approaches within a single project.  Further details on integrating QAL and QSA code are outlined in Appendix A.
+
 semantic search...
 data used:
    Doc  Page
 0    0    22
 1    2   579
-2    2   152
-3    2   588
-4    2   384
-5    2   591
-6    2   190
-7    2   587
-8    2   568
-9    2   458
+2    2   588
+3    2   445
+4    2   152
+5    2    26
+6    2   461
+7    2   448
+8    2   466
+9    2   457
 Asking gemini...
 received answer
 {
   "page": 22,
   "doc": 0,
-  "answer": "The provided text mentions that the system is based upon a CTEC Quantec system.  It also mentions a Quantec Addressable Call System."
+  "answer": "The provided text mentions that the system is based upon a CTEC Quantec system.  It also states that the master controller supplies power to and controls a Quantec Addressable Call System.  Therefore, the two methods are not explicitly stated, but implied to be CTEC Quantec and Quantec Addressable Call System."
 }
