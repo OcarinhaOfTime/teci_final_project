@@ -1,0 +1,266 @@
+Creating embedding...
+semantic search...
+data used:
+
+## Document 0, Page 22
+
+
+## Document 2, Page 579
+
+
+## Document 2, Page 152
+
+
+## Document 2, Page 588
+
+
+## Document 2, Page 384
+
+
+## Document 2, Page 591
+
+
+## Document 2, Page 190
+
+
+## Document 2, Page 587
+
+
+## Document 2, Page 568
+
+
+## Document 2, Page 458
+
+
+## Document 2, Page 457
+
+
+## Document 2, Page 461
+
+
+## Document 2, Page 66
+
+
+## Document 2, Page 445
+
+
+## Document 2, Page 9
+
+
+## Document 2, Page 104
+
+
+## Document 2, Page 153
+
+
+## Document 2, Page 428
+
+
+## Document 2, Page 185
+
+
+## Document 2, Page 575
+
+
+Asking gemini...
+Creating embedding...
+semantic search...
+data used:
+    Doc  Page
+0     0    21
+1     2   578
+2     2   151
+3     2   587
+4     2   383
+5     2   590
+6     2   189
+7     2   586
+8     2   567
+9     2   457
+10    2   456
+11    2   460
+12    2    65
+13    2   444
+14    2     8
+15    2   103
+16    2   152
+17    2   427
+18    2   184
+19    2   574
+Asking gemini...
+Creating embedding...
+semantic search...
+data used:
+    Doc  Page
+0     0    22
+1     2   579
+2     2   152
+3     2   588
+4     2   384
+5     2   591
+6     2   190
+7     2   587
+8     2   568
+9     2   458
+10    2   457
+11    2   461
+12    2    66
+13    2   445
+14    2     9
+15    2   104
+16    2   153
+17    2   428
+18    2   185
+19    2   575
+20    2   127
+21    2   143
+22    2    26
+23    2   186
+24    2   206
+25    2    46
+26    2   468
+27    2   467
+28    2   465
+29    2    32
+Asking gemini...
+Creating embedding...
+semantic search...
+data used:
+   Doc  Page
+0    0    22
+1    2   579
+2    2   152
+3    2   588
+4    2   384
+5    2   591
+6    2   190
+7    2   587
+8    2   568
+9    2   458
+Asking gemini...
+Creating embedding...
+semantic search...
+data used:
+   Doc  Page
+0    0    22
+1    2   579
+2    2   152
+3    2   588
+4    2   384
+5    2   591
+6    2   190
+7    2   587
+8    2   568
+9    2   458
+Asking gemini...
+received answer
+{
+  "page": 22,
+  "doc": 0,
+  "answer": "The provided text mentions that the CTEC Quantec system has been adapted to provide a bespoke solution for the RUH by the manufacturer.  The system uses a QT601-2 master control panel, which is the processor for the system and controls a Quantec Addressable Call System.  Therefore, the two programming methods are not explicitly stated, but it can be inferred that one is related to the QT601-2 master control panel and the other is related to the Quantec Addressable Call System."
+}
+Creating embedding...
+semantic search...
+data used:
+   Doc  Page
+0    0    22
+1    2   579
+2    2   152
+3    2   588
+4    2   384
+5    2   591
+6    2   190
+7    2   587
+8    2   568
+9    2   458
+Asking gemini...
+received answer
+{
+  "page": 22,
+  "doc": 0,
+  "answer": "The provided text mentions that the CTEC Quantec system has been adapted to provide a bespoke solution, and it comprises a QT601-2 master control panel that is the processor for the system and controls a Quantec Addressable Call System.  Therefore, the two programming methods are not explicitly stated, but it is implied that there is a master control panel programming method and an addressable call system programming method."
+}
+Creating embedding...
+semantic search...
+data used:
+   Doc  Page
+0    0    22
+1    2   579
+2    2   152
+3    2   588
+4    2   384
+5    2   591
+6    2   190
+7    2   587
+8    2   568
+9    2   458
+Asking gemini...
+received answer
+{
+  "page": 22,
+  "doc": 0,
+  "answer": "The provided text mentions that the CTEC Quantec system has been adapted to provide a bespoke solution for the RUH.  The system uses a QT601-2 master control panel and a Quantec Addressable Call System."
+}
+Creating embedding...
+semantic search...
+data used:
+   Doc  Page
+0    2   543
+1    0    26
+2    0    28
+3    0    10
+4    2    68
+5    2    86
+6    2    88
+7    2   544
+8    2    74
+9    2   542
+Asking gemini...
+received answer
+{
+  "page": 26,
+  "doc": 0,
+  "answer": "The rating of RCBOs does not exceed 30mA for residual currents."
+}
+Creating embedding...
+semantic search...
+data used:
+   Doc  Page
+0    2   543
+1    0    26
+2    0    28
+3    0    10
+4    2    68
+5    2    86
+6    2    88
+7    2   544
+8    2    74
+9    2   542
+Asking gemini...
+received answer
+{
+  "page": 26,
+  "doc": 0,
+  "answer": "The rating of RCBOs does not exceed 30mA for residual currents."
+}
+Creating embedding...
+semantic search...
+data used:
+   Doc  Page
+0    0    22
+1    2   579
+2    2   152
+3    2   588
+4    2   384
+5    2   591
+6    2   190
+7    2   587
+8    2   568
+9    2   458
+Asking gemini...
+received answer
+{
+  "page": 22,
+  "doc": 0,
+  "answer": "The provided text mentions that the system is based upon a CTEC Quantec system.  It also mentions a Quantec Addressable Call System."
+}
