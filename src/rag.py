@@ -87,7 +87,6 @@ class Rag:
 
 
 if __name__ == "__main__":
-
     query = 'What is the maximum rating for RCBO in the small power system?'
     query = 'What are the two programming methods used for QUANTEC?'
     rag = Rag()
