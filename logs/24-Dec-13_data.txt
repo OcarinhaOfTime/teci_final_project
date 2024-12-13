@@ -1,0 +1,983 @@
+Using the data exclusively from the section 'Information', answer the asked question, telling from which document and page it was obtained.
+Use a json format as your reply, using the provided template.
+Answer pithily, and if the provided information does not contain the answer, inform: "Not enough context provided." 
+
+# Question
+What are the two programming methods used for QUANTEC?
+
+# Answer Template
+{
+    "page":0,
+    "doc":0,
+    "answer":"This is an example answer.",
+    "answer_exists_in_context":true
+}
+
+# Information
+
+## Document 0, Page 22
+BUILDING USER GUIDE – TECHNICAL USER 
+Royal United Hospitals, Dyson Cancer Centre, Bath 
+© 2023 Riddell Project Management – Rev 2 (09.02.24) 
+2.4 Staff Attack Alarm 
+ 
+A dedicated staff attack system has been installed. The system is compatible with the 
+existing system at the RUH site and is connected to the Facilities Network via the structured 
+cabling system.  
+ 
+The staff attack system comprises of: 
+ 
+• Master Controller 
+• Corridor Display Units 
+• Call Buttons 
+• Indicators and Sounders 
+• All necessary control equipment, power supplies, cabling and data connections. 
+ 
+The staff attack system is intended to provide a call system to the bui lding that staff can use 
+to generate an alert under a duress situation.  
+ 
+The building incorporates two master control panels: 
+ 
+• Panel 1 will run  the CANCER CENTRE building – sited in main entrance lobby 
+(64.0.001) 
+• Panel 2 (Repeater Panel) – sited in main entrance for radiotherapy (64.0.136) 
+ 
+Each panel is split into sub areas so that it provides its own local alarm. 
+ 
+The system is based upon a CTEC Quantec system that has been adapted to provide a 
+bespoke solution for the RUH by the manufacturer.  
+ 
+Master Controller  
+The system comprises a QT601-2 master control panel that is the processor for the system 
+and has an on-board LCD screen with access a nd programming keys. This supplies power 
+to and controls a Quantec Addressable Call System.  
+ 
+ 
+  
+  
+ 
+Master control panels at main 
+entrance (64.0.001) 
+ 
+ 
+Corridor display unit 
+ 
+ 
+Staff attack button with plastic 
+protector to reduce false alerts 
+ 
+Monitors all network devices and manages the routing and distribution of all calls.  
+
+## Document 2, Page 579
+WSP Building Services Specification
+70051669
+o The ESC shall provide to the CA for approval, prior to the commencement of
+the work, a detailed wiring schedule showing all connections at control
+equipment.
+o All schedules will be referenced to the local cabinet and the overall schematic
+so that the scope of the entire project can be easily determined by viewing the
+schematic and schedules.
+· Full software configuration details
+· The ESC shall provide to the CA for approval, prior to the commencement of the work,
+a full schedule of the following to assist with the design of the Electronic Security
+Systems:
+o All major control equipment
+o Schedule of Inputs/Outputs per building.
+o Schedule of controlled doors and gates
+o Special functional requirements
+o Graphical Maps of the site
+· Design Intent Methodology (DIM).
+o The ESC shall provide to the CA for approval, prior to the commencement of
+the work, a Design Intent Methodology document that will clearly explain, in
+layman terminology, exactly how the security system will function and how, on
+a day-to-day basis the operators will use the system.
+Note: Drawings and schedules shall only contain general references within their title
+blocks. No reference shall be made on any document which indicates, or could lead
+through further investigation to the location or address of the project, building or site.
+A suitable method of identifying drawings shall be agreed with the CA prior to
+commencement of drawing and schedule production.
+7309006 System requirements
+Access control systems shall comply with BS EN 50133 and any particular requirements
+identified elsewhere in this is specification or on drawings.
+The contractor is to design, supply, install and put to work, the access control system as shown
+on the drawings and to the particulars identified elsewhere in this specification.
+7309007 Protocols
+All security systems shall be open protocol unless the client has a specific requirement for
+integration with an existing bespoke system.
+7310000 Data and voice systems – hard wired
+7310001 General requirements
+All data installations shall meet the requirements of the RUH Trust Structured
+Cabling Specification v1.2, or whichever version is current at time of
+installation.
+Comply with the requirements of this and other sections of the specification as well as
+associated drawings and schedules.
+This specification section forms a part of the performance criteria for a hard wired
+structured cabling system between patching cabinets and field connections to client
+terminals.
+
+## Document 2, Page 588
+WSP Building Services Specification
+70051669
+Time out control
+including key control
+Time out control shall allow a lighting installation to switch off,
+or dim to a pre-determined level at a pre-determined time.
+Manual dimming Manual dimming control shall allow users to easily dim the
+lighting within a pre-determined area.
+Scene setting Scene setting control shall allow the users of a space to
+choose from a pre-determined number of lighting
+arrangements.
+Colour shifting Control of a colour shifting lighting installation shall allow a
+system to automatically adjust the colour temperature of the
+light sources to match a pre-determined sequence, typically in
+order to mimic the changing colours of daylight through a
+dawn to dusk cycle
+The control type (or types depending on the complexity of the design) will be stated in the
+particular requirements of this specification.
+7313003 System types
+There are three types of lighting control system:
+1. Standalone systems where an independent or integrated detector switches or
+dims a luminaire, or group of luminaires independent of any external input or
+control.
+2. Semi networked systems where a group of luminaires, detectors and switches are
+connected via a lighting control module (LCM). LCM’s in semi networked
+arrangements are autonomous and operate to a predetermined set of parameters
+which can be altered through the local connection of a pc running suitable
+software. Semi networked systems shall comply with BS EN 62386 (all associated
+parts).
+3. Networked systems where detectors, switches and transducers are connected as
+data inputs to a central control system via TIA 485 standard interfaces and using
+an open protocol control such as DALI or KNX. Control of lighting is then managed
+by the control system via outstation relay or contactor switching of circuits.
+Networked systems shall be provided with a permanently connected “head end”
+computer to allow continuous monitoring of system status and onsite modification
+of control protocols.  Networked systems shall comply with BS EN 62386 (all
+associated parts).
+The system type (or types depending on the complexity of the design) will be stated in the
+particular requirements of this specification.
+7313004 System protocol
+The control system shall be either standalone or networked as indicated in the particular
+requirements of this specification. Where a networked system is being utilised, the control
+protocol shall be either DALI or KNX. Where existing systems are being expanded, the
+existing system protocol shall be used.
+7313006 Control software
+The lighting control software shall be provided license free and capable of running on the
+Microsoft Windows platform. Software shall be capable of the following:
+· Complete and autonomous operation of the lighting control system within pre-
+defined parameters.
+· Capable of accepting and incorporating updates without the need to re-boot.
+
+## Document 2, Page 445
+WSP Building Services Specification
+70051669
+The BMS software shall be protected from unauthorised entry.
+Unless otherwise indicated provide, as a minimum, password-protected operator access for the
+following levels:
+1. Level 1  Ability to display all point data
+2. Level 2 As level 1 with ability to initiate data logging functions
+3. Level 3 As level 2 with ability to change user-adjustable set points and time schedules
+4. Level 4       As level 3 with ability to change control strategies, schematic/graphics functions
+and password assignment.
+Password-protected operator access shall be set up for both operator workstations and field
+controllers which have an operator interface.  A common overall system password set and
+procedure shall be provided whether access is gained from operator terminals, portable
+terminals or keypads on single or multi-site schemes.
+Passwords shall permit at least 6 alpha/numeric characteristics and users shall be able to
+change their password/pin numbers at will.
+At operator terminals a user logging-on shall be recorded with time and date.  Unless otherwise
+indicated logging off shall be command or time-out from non-use of the keyboard or mouse with
+the event again recorded.
+5201011 System communications
+General
+The system communications shall allow the full transfer of monitored, logged, alarm, backup
+and configuration data between the operator workstation and addressable field controllers.
+The communication protocol selected shall seek to achieve error-free data transfer and shall
+include an error detection check, error correction and/or re-try technique.  The protocol shall limit
+re-transmission and raise an alarm condition on failure.
+The available bandwidth shall be sufficient to avoid excessive delays in transmitting data.  The
+maximum permissible time delay shall not exceed that indicated.
+Modems shall comply with BS 6320 and the speed of modems shall be as indicated.
+Connections to telecommunication systems shall comply with BS 6701.
+Provide an ISDN link if defined unless otherwise indicated.
+Field-level protocols shall:
+1. Run on the required communications media
+2. Provide a communications throughput sufficient for the intended application
+3. Provide appropriate network topology options
+4. Allow sufficient maximum physical segment length
+5. Allow sufficient maximum number of nodes for each physical segment and the logical
+network
+6. Provide sufficient maximum distance between nodes
+7. Make use of off-the-shelf network devices such as repeaters, bridges and routers
+8. Allow control devices to be powered from the network where indicated.
+Ensure that the field-level protocols are compatible with fully developed network configuration
+and management tools.
+Direct interoperability
+Ensure that each of the protocol’s objects and attributes are consistent with the achievement of
+the specified level of direct interoperability.
+Ensure that each of the protocol’s arrangements for physical connection, data packaging,
+network management and error detection/correction are the same.
+Gateways
+
+## Document 2, Page 152
+WSP Building Services Specification
+70051669
+Similar items of apparatus and equipment shall be made and provided by the same
+manufacturer where practicable and corresponding parts of all apparatus and equipment
+shall be interchangeable to reduce the need for different attention and spares.
+1006031 Software
+Obtain on behalf of the end user all appropriate licences, permissions, copyright waivers,
+rights of use and the like from the owners of the software rights.  Ensure that the end user
+is properly registered with the software supplier for support and appropriate updating.
+Application software shall be in compliance with BS 7649.
+Provide back-up copies of any software and two back-up copies of all software items, as
+commissioned.
+1006032 Software time function
+Ensure all equipment utilizing a time and/or date function, supplied and used on the project,
+meets the following conformity requirements:
+1. All time and date set functions in either software or firmware shall use a minimum 64bit
+integer to determine the current time and date as well as any processes or events that
+rely on time and/or date settings
+2. No value for date will cause any interruption or adverse effect in performance
+3. Where existing equipment is re-used, the date and time-based functionality and
+performance must be verified to ensure it utilises a minimum 32bit integer to determine
+the current time and date as well as any processes or events that rely on time and/or
+date settings. Correct time and date functionality shall be maintained for a minimum of
+25 years after practical completion
+4. Leap years must be recognised as a leap year
+1006033 Fire precautions
+Take all reasonable fire precautions in respect of stores, workshops and otherinstallations.
+Where it is necessary to use any naked flame or welding equipment in executing the Works
+and where combustible materials are in use, adequate protection shall be given to other
+adjacent materials and personnel.  Suitable fire extinguishers shall be readily available at
+the position where such work is proceeding.
+1008000 QUALITY
+1008001 Quality control
+Prepare a method statement to indicate fully the quality control programme for the Works
+and indicate clearly the role of the CA in that programme.
+The objective of the quality control programme shall be:
+1. Full compliance with the ISO 9001 standards and procedures
+2. Full compliance with the specification in regard to materials and workmanship
+3. Establishment of standards that will be acceptable to the CA by means of a sample
+installations prior to full scale erection of all major elements and trades required
+4. Submission to the CA for agreement of any samples of proposed manufacturer’s items
+to be utilised in the Works prior to ordering
+5. Establishment of method statements defining quality standards
+The quality control system will be subject to audit at any time during the duration of the
+contract.
+The CA shall issue a quality control instruction where the installation fails to meet the
+standard required in the specification.
+
+## Document 2, Page 26
+WSP Building Services Specification
+70051669
+7304010 Control panels
+7304011 Power supplies
+7304012 Installation and wiring
+7309000 Door access systems
+7309001 General requirements
+7309002 Electronic Security Contractor (ESC)
+7309003 Personnel
+7309004 Warning signage
+7309005 Developing the design
+7309006 System requirements
+7309007 Protocols
+7313000 Lighting control systems
+7313001 General
+7313002 Control types
+7313003 System types
+7313004 System protocol
+7313005 Head end and system control
+7313006 Control software
+7313007 Lighting control modules (LCM)
+7313008 Standalone detectors
+7313009 Networked detectors
+7313010 Integrated detectors
+7313011 Daylight linking
+7313012 Constant illuminance adjustment (CIA)
+7313013 Manual dimming
+7313014 Scene setting
+7313015 Wiring
+7313016 Commissioning
+
+## Document 2, Page 461
+WSP Building Services Specification
+70051669
+In addition the selection of materials and equipment shall be suitable for the application with regard
+to the possible effects of ingress of dust or sand and damp humid conditions.
+5202004 Description of works
+The BMS/controls system shall consist of the following elements:
+The new BMS installation shall control the mechanical heating, cooling and ventilation plant etc.
+that serves the RUH Cancer Centre central plant and the services to various facilities, faculties
+and operators that will occupy the building upon completion of the works.
+The BMS installation will communicate back to the site wide Top End SCADA system which is
+built upon a framework utilizing OPC Systems.net. This allows for full functioning trending, alarm
+management, tag set up, export routing, scaling and recording.
+Hardware & Graphics
+The software and graphics associated with the Cancer Centre building shall be compatible with
+the Standard List of Devices as outlined in the RUH BMS Specification Component 1 SCADA
+Requirements. If a device is not mentioned on the Standard List of Devices, written approval
+from the Hospital Engineer of the RUH will be required before this device can be implemented.
+Graphics to be in line with the RUH site standards and submitted for approval by the Trust BMS
+operators.
+5202005 Exclusions
+Exclusions from the BMS scope of works are:
+1. Lighting control systems
+2. Security systems
+3. Separate/own dedicated external telephone line
+4. Specialist medical equipment
+5202006 Free issue equipment
+The BMS/controls specialist shall hand free issue plant and equipment for incorporation into the
+works as follows:
+· Damper actuators (“free-issue” to ductwork installer)
+· Motorised valves – chilled water (“free-issue” to mechanical installer)
+· Motorised valves – LTHW (“free-issue” to mechanical installer)
+· Sensor pockets – pipework (“free-issue” to mechanical installer)
+· Sensors – ductwork (“free-issue” to ductwork installer)
+· Sensors – within AHU’s (“free-issue” to AHU manufacturer)
+(Note: The term “sensors” includes all field equipment, which form part of the BMS/controls and
+monitoring system)
+All control valves shall beSeimans – Acvatix Control Valves and Actuators and all control sensors
+shall be Seimans – Symaro .
+The BMS/Controls specialist shall provide power and control wiring and final connection to all
+items stated.
+5202007 Interfacing requirements
+
+## Document 2, Page 457
+WSP Building Services Specification
+70051669
+System documentation will be provided at contract completion and in a format compatible with
+the overall project record documentation.
+Operation and maintenance manuals
+A preliminary copy shall be made available to the CA in sufficient time for comments to be
+incorporated.
+The operation and maintenance manuals shall include but not limited to:
+1. A written description of plant operation
+2. Control strategy/logic diagrams recording the final version of configuration software installed
+3. Details of system application software configuration
+4. A points list including hard and soft points.  All points shall have a unique reference
+5. A description of user adjustable points
+6. Commissioning records and final commissioning report
+7. Detailed data sheets for all control components and equipment
+8. Wiring circuit details including origin, size, route and destination of each cable
+9. Diagrams showing the full diagrammatic (network structures, configuration diagrams, flow
+charts, outstations, peripherals etc) and physical layout of the controls system and
+components.
+10. Security management and access details
+11. Comprehensive instructions for switching on, daily operation, switching off, isolation, fault
+finding and procedures for dealing with emergency conditions
+12. Instructions for any precautionary measures necessary
+13. Instructions for the routine operation of the control system including simple day-to-day
+guidance for those operating the control system with limited technical skills
+14. Instructions for servicing and system upkeep
+15. A provision for update and modification
+16. Suppliers and spare parts references, contacts, telephone numbers, and addresses shall
+be supplied where relevant.
+5201021 Software
+Two complete sets, unless otherwise indicated, of all software developed by the Controls
+Specialist shall be provided for retention by the Employer.
+Allowance shall be made to up-date the software as maybe necessary during the one year
+defects period.
+Obtain on behalf of the end user all appropriate licences, permissions, copyright waivers, rights
+of use and the like from the owners of the software rights.  Ensure that the end user is properly
+registered with the software supplier for support and appropriate updating.
+Back-up copies of all system configuration files and master software disks shall be supplied in
+an appropriate lockable storage facility.  All system and data files shall be current as at the hand-
+over date, disks to be suitably identified and directories and files cross-referenced in the
+maintenance manuals.  In addition to the operating software, each disc will also contain a
+complete set of original set points for all conditions.  The storage unit and key shall be handed
+to the Employer at handover.
+A further copy of all master software, system configuration files etc shall be maintained off-site
+by the Controls Specialist for a minimum period of three years or as otherwise indicated.
+All passwords shall be provided at handover.
+5202000 BMS/AUTOMATIC CONTROLS – PARTICULAR REQUIREMENTS
+5202001 General requirements
+The Installer shall employ a BMS/controls specialist to design, supply, install and commission a
+complete and fully operational automatic controls system as indicated.
+
+## Document 2, Page 458
+WSP Building Services Specification
+70051669
+The Controls Specialist shall be responsible for:
+1. The design and engineering of the complete automatic controls system including all necessary
+co-ordination
+2. Providing all materials to form a complete and operational system as indicated
+3. Off-loading, positioning and fixing of all control panels
+4. Installation
+5. Supervision of the installation
+6. System calibration
+7. Software programming
+8. Testing and commissioning
+9. Completed system demonstration to the CA and Employer
+10. Employer training
+11. Record documentation
+Reference shall be made to the RUH Standard BMS Specification when designing and installing
+the automatic controls installation for the site;
+- BMS Specification Component 1 – SCADA Specification V1
+- BMS Specification Component 2 – PLC Hardware V1
+- BMS Specification Component 3 – Description of Operations V1
+The RUH specification requires that the BMS installation is manufactured by Panasonic and
+installed by an approved SCADA installer.
+It is the intention of this specification to outline the functional requirements of the system, and it is
+expected that the final BMS providers shall base their proposals on their proprietary systems.
+However, where any deviation from the specification is proposed, this must be analysed to ensure
+that the system offered is fully compliant with the requirements of the final BMS specification.
+BMS contractor shall allow for all control wiring in the outfield for the smoke fire dampers and
+smoke fire air transfer grilles.
+The control system shall be based on a Direct Digital Control (DDC) or electronic type as indicated.
+The Controls Specialist shall ensure that the selected control strategies are appropriate for the
+building services systems and their intended application.
+The following information shall be submitted to the CA for review and comment prior to
+manufacturer and installation:
+1. Description of controls operation
+2. Network schematic (detailing all computer hardware, interfaces, locations and cable
+specifications)
+3. Control panel layouts, wiring diagrams and labelling
+4. Wiring schematics and general arrangements
+5. Equipment schedules (listing control sensors, valves, computer hardware and software and
+any other devices)
+6. Electrical installation details (identifying for power, control and network cables the proposed
+method of containment and cable types)
+7. Power cable sizing calculations
+8. Method statements for:
+9. Testing and commissioning
+10. Proving of the system and demonstration
+11. Off-site works inspection and testing
+12. Installation of site wiring
+13. Technical details of all field and panel mounted equipment
+14. Control valve schedule
+15. Schedule of proposed set points
+16. Final points schedule
+
+## Document 2, Page 384
+WSP Building Services Specification
+70051669
+technique.
+Stations shall be either fitted on wall or recessed into the wall, depending upon final location.
+Each station shall communicate with the system main control unit.  Each station shall be
+equipped with a microcomputer control panel/user interface. Additional remote arrival signal
+lamps shall be provided on the wall behind each nurse station local to the send and receive
+station.
+The new 3 way diverter shall be automatic in operation and shall be equipped with a
+microcomputer control board that communicates with the system main control unit. Each
+diverter shall also be equipped with an optical switch that detects passing carriers.
+The existing main control units (MCU) shall provide full access and control over statistics, logs
+and programming functions of the extended system.
+The system blowers shall shut-down on receipt of a signal of fire alarm activation.
+The specialist shall also install a 160mm dia. tubing from the agreed interface point within the
+Heating and Hot Water Plantroom (13.006) to the Pharmacy Dispensary Store/Stock (9.008).
+The ‘point-to-point’ tubing shall have capped ends and be installed such that it can be connected
+to the site wide infrastructure and send and receive outstation in the future.
+The pneumatic tube transport systems installer shall be responsible for the testing, proving,
+commissioning and setting to work of both systems. Commissioning shall mean the
+advancement of the installations from the state of static completion to full dynamic working order
+to meet the specified requirements and design intent. All functions of the system must be
+thoroughly tested including a full software check for microprocessors and computer systems to
+ensure that software issues are eliminated.
+The works has been agreed in principle with Quirepace the incumbent pneumatic tube specialist
+and manufacturer for the Trust and will undertake the contractor design proportion for these
+works.
+
+Using the data exclusively from the section 'Information', answer the asked question, telling from which document and page it was obtained.
+Use a json format as your reply, using the provided template.
+Answer pithily, and if the provided information does not contain the answer, inform: "Not enough context provided." 
+
+# Question
+What are the two programming methods used for QUANTEC?
+
+# Answer Template
+{
+    "page":0,
+    "doc":0,
+    "answer":"This is an example answer.",
+    "answer_exists_in_context":true
+}
+
+# Information
+
+## Document 2, Page 579
+WSP Building Services Specification
+70051669
+o The ESC shall provide to the CA for approval, prior to the commencement of
+the work, a detailed wiring schedule showing all connections at control
+equipment.
+o All schedules will be referenced to the local cabinet and the overall schematic
+so that the scope of the entire project can be easily determined by viewing the
+schematic and schedules.
+· Full software configuration details
+· The ESC shall provide to the CA for approval, prior to the commencement of the work,
+a full schedule of the following to assist with the design of the Electronic Security
+Systems:
+o All major control equipment
+o Schedule of Inputs/Outputs per building.
+o Schedule of controlled doors and gates
+o Special functional requirements
+o Graphical Maps of the site
+· Design Intent Methodology (DIM).
+o The ESC shall provide to the CA for approval, prior to the commencement of
+the work, a Design Intent Methodology document that will clearly explain, in
+layman terminology, exactly how the security system will function and how, on
+a day-to-day basis the operators will use the system.
+Note: Drawings and schedules shall only contain general references within their title
+blocks. No reference shall be made on any document which indicates, or could lead
+through further investigation to the location or address of the project, building or site.
+A suitable method of identifying drawings shall be agreed with the CA prior to
+commencement of drawing and schedule production.
+7309006 System requirements
+Access control systems shall comply with BS EN 50133 and any particular requirements
+identified elsewhere in this is specification or on drawings.
+The contractor is to design, supply, install and put to work, the access control system as shown
+on the drawings and to the particulars identified elsewhere in this specification.
+7309007 Protocols
+All security systems shall be open protocol unless the client has a specific requirement for
+integration with an existing bespoke system.
+7310000 Data and voice systems – hard wired
+7310001 General requirements
+All data installations shall meet the requirements of the RUH Trust Structured
+Cabling Specification v1.2, or whichever version is current at time of
+installation.
+Comply with the requirements of this and other sections of the specification as well as
+associated drawings and schedules.
+This specification section forms a part of the performance criteria for a hard wired
+structured cabling system between patching cabinets and field connections to client
+terminals.
+
+## Document 0, Page 22
+BUILDING USER GUIDE – TECHNICAL USER 
+Royal United Hospitals, Dyson Cancer Centre, Bath 
+© 2023 Riddell Project Management – Rev 2 (09.02.24) 
+2.4 Staff Attack Alarm 
+ 
+A dedicated staff attack system has been installed. The system is compatible with the 
+existing system at the RUH site and is connected to the Facilities Network via the structured 
+cabling system.  
+ 
+The staff attack system comprises of: 
+ 
+• Master Controller 
+• Corridor Display Units 
+• Call Buttons 
+• Indicators and Sounders 
+• All necessary control equipment, power supplies, cabling and data connections. 
+ 
+The staff attack system is intended to provide a call system to the bui lding that staff can use 
+to generate an alert under a duress situation.  
+ 
+The building incorporates two master control panels: 
+ 
+• Panel 1 will run  the CANCER CENTRE building – sited in main entrance lobby 
+(64.0.001) 
+• Panel 2 (Repeater Panel) – sited in main entrance for radiotherapy (64.0.136) 
+ 
+Each panel is split into sub areas so that it provides its own local alarm. 
+ 
+The system is based upon a CTEC Quantec system that has been adapted to provide a 
+bespoke solution for the RUH by the manufacturer.  
+ 
+Master Controller  
+The system comprises a QT601-2 master control panel that is the processor for the system 
+and has an on-board LCD screen with access a nd programming keys. This supplies power 
+to and controls a Quantec Addressable Call System.  
+ 
+ 
+  
+  
+ 
+Master control panels at main 
+entrance (64.0.001) 
+ 
+ 
+Corridor display unit 
+ 
+ 
+Staff attack button with plastic 
+protector to reduce false alerts 
+ 
+Monitors all network devices and manages the routing and distribution of all calls.  
+
+## Document 2, Page 588
+WSP Building Services Specification
+70051669
+Time out control
+including key control
+Time out control shall allow a lighting installation to switch off,
+or dim to a pre-determined level at a pre-determined time.
+Manual dimming Manual dimming control shall allow users to easily dim the
+lighting within a pre-determined area.
+Scene setting Scene setting control shall allow the users of a space to
+choose from a pre-determined number of lighting
+arrangements.
+Colour shifting Control of a colour shifting lighting installation shall allow a
+system to automatically adjust the colour temperature of the
+light sources to match a pre-determined sequence, typically in
+order to mimic the changing colours of daylight through a
+dawn to dusk cycle
+The control type (or types depending on the complexity of the design) will be stated in the
+particular requirements of this specification.
+7313003 System types
+There are three types of lighting control system:
+1. Standalone systems where an independent or integrated detector switches or
+dims a luminaire, or group of luminaires independent of any external input or
+control.
+2. Semi networked systems where a group of luminaires, detectors and switches are
+connected via a lighting control module (LCM). LCM’s in semi networked
+arrangements are autonomous and operate to a predetermined set of parameters
+which can be altered through the local connection of a pc running suitable
+software. Semi networked systems shall comply with BS EN 62386 (all associated
+parts).
+3. Networked systems where detectors, switches and transducers are connected as
+data inputs to a central control system via TIA 485 standard interfaces and using
+an open protocol control such as DALI or KNX. Control of lighting is then managed
+by the control system via outstation relay or contactor switching of circuits.
+Networked systems shall be provided with a permanently connected “head end”
+computer to allow continuous monitoring of system status and onsite modification
+of control protocols.  Networked systems shall comply with BS EN 62386 (all
+associated parts).
+The system type (or types depending on the complexity of the design) will be stated in the
+particular requirements of this specification.
+7313004 System protocol
+The control system shall be either standalone or networked as indicated in the particular
+requirements of this specification. Where a networked system is being utilised, the control
+protocol shall be either DALI or KNX. Where existing systems are being expanded, the
+existing system protocol shall be used.
+7313006 Control software
+The lighting control software shall be provided license free and capable of running on the
+Microsoft Windows platform. Software shall be capable of the following:
+· Complete and autonomous operation of the lighting control system within pre-
+defined parameters.
+· Capable of accepting and incorporating updates without the need to re-boot.
+
+## Document 2, Page 445
+WSP Building Services Specification
+70051669
+The BMS software shall be protected from unauthorised entry.
+Unless otherwise indicated provide, as a minimum, password-protected operator access for the
+following levels:
+1. Level 1  Ability to display all point data
+2. Level 2 As level 1 with ability to initiate data logging functions
+3. Level 3 As level 2 with ability to change user-adjustable set points and time schedules
+4. Level 4       As level 3 with ability to change control strategies, schematic/graphics functions
+and password assignment.
+Password-protected operator access shall be set up for both operator workstations and field
+controllers which have an operator interface.  A common overall system password set and
+procedure shall be provided whether access is gained from operator terminals, portable
+terminals or keypads on single or multi-site schemes.
+Passwords shall permit at least 6 alpha/numeric characteristics and users shall be able to
+change their password/pin numbers at will.
+At operator terminals a user logging-on shall be recorded with time and date.  Unless otherwise
+indicated logging off shall be command or time-out from non-use of the keyboard or mouse with
+the event again recorded.
+5201011 System communications
+General
+The system communications shall allow the full transfer of monitored, logged, alarm, backup
+and configuration data between the operator workstation and addressable field controllers.
+The communication protocol selected shall seek to achieve error-free data transfer and shall
+include an error detection check, error correction and/or re-try technique.  The protocol shall limit
+re-transmission and raise an alarm condition on failure.
+The available bandwidth shall be sufficient to avoid excessive delays in transmitting data.  The
+maximum permissible time delay shall not exceed that indicated.
+Modems shall comply with BS 6320 and the speed of modems shall be as indicated.
+Connections to telecommunication systems shall comply with BS 6701.
+Provide an ISDN link if defined unless otherwise indicated.
+Field-level protocols shall:
+1. Run on the required communications media
+2. Provide a communications throughput sufficient for the intended application
+3. Provide appropriate network topology options
+4. Allow sufficient maximum physical segment length
+5. Allow sufficient maximum number of nodes for each physical segment and the logical
+network
+6. Provide sufficient maximum distance between nodes
+7. Make use of off-the-shelf network devices such as repeaters, bridges and routers
+8. Allow control devices to be powered from the network where indicated.
+Ensure that the field-level protocols are compatible with fully developed network configuration
+and management tools.
+Direct interoperability
+Ensure that each of the protocol’s objects and attributes are consistent with the achievement of
+the specified level of direct interoperability.
+Ensure that each of the protocol’s arrangements for physical connection, data packaging,
+network management and error detection/correction are the same.
+Gateways
+
+## Document 2, Page 152
+WSP Building Services Specification
+70051669
+Similar items of apparatus and equipment shall be made and provided by the same
+manufacturer where practicable and corresponding parts of all apparatus and equipment
+shall be interchangeable to reduce the need for different attention and spares.
+1006031 Software
+Obtain on behalf of the end user all appropriate licences, permissions, copyright waivers,
+rights of use and the like from the owners of the software rights.  Ensure that the end user
+is properly registered with the software supplier for support and appropriate updating.
+Application software shall be in compliance with BS 7649.
+Provide back-up copies of any software and two back-up copies of all software items, as
+commissioned.
+1006032 Software time function
+Ensure all equipment utilizing a time and/or date function, supplied and used on the project,
+meets the following conformity requirements:
+1. All time and date set functions in either software or firmware shall use a minimum 64bit
+integer to determine the current time and date as well as any processes or events that
+rely on time and/or date settings
+2. No value for date will cause any interruption or adverse effect in performance
+3. Where existing equipment is re-used, the date and time-based functionality and
+performance must be verified to ensure it utilises a minimum 32bit integer to determine
+the current time and date as well as any processes or events that rely on time and/or
+date settings. Correct time and date functionality shall be maintained for a minimum of
+25 years after practical completion
+4. Leap years must be recognised as a leap year
+1006033 Fire precautions
+Take all reasonable fire precautions in respect of stores, workshops and otherinstallations.
+Where it is necessary to use any naked flame or welding equipment in executing the Works
+and where combustible materials are in use, adequate protection shall be given to other
+adjacent materials and personnel.  Suitable fire extinguishers shall be readily available at
+the position where such work is proceeding.
+1008000 QUALITY
+1008001 Quality control
+Prepare a method statement to indicate fully the quality control programme for the Works
+and indicate clearly the role of the CA in that programme.
+The objective of the quality control programme shall be:
+1. Full compliance with the ISO 9001 standards and procedures
+2. Full compliance with the specification in regard to materials and workmanship
+3. Establishment of standards that will be acceptable to the CA by means of a sample
+installations prior to full scale erection of all major elements and trades required
+4. Submission to the CA for agreement of any samples of proposed manufacturer’s items
+to be utilised in the Works prior to ordering
+5. Establishment of method statements defining quality standards
+The quality control system will be subject to audit at any time during the duration of the
+contract.
+The CA shall issue a quality control instruction where the installation fails to meet the
+standard required in the specification.
+
+## Document 2, Page 587
+WSP Building Services Specification
+70051669
+Minimum number
+of pairs used
+2 2 4
+7313000 Lighting control systems
+7313001 General
+Comply with the requirements of this and other sections of the specification as well as
+associated drawings and schedules.
+The lighting control systems shall be provided as shown on the drawings and as specified
+elsewhere and shall meet the requirements of recommendations of BS EN 62386 and BRE
+Digest 498.
+The design is provided at scheme level and detail design along with supply, installation
+and commissioning shall be carried out by the contractor. This will allow the design to be
+optimised to the contractors preferred control system manufacturer.
+7313002 Control types
+The table below gives an overview of types of control, related to both energy saving and
+scene setting.
+Type Description
+Absence detection
+(Manual ON/Auto
+OFF)
+Absence detection shall operate by providing the occupier of
+a space with a light switch allowing them to switch the lighting
+on when they enter a space. The lighting shall then be
+switched off automatically when the control system has
+detected no movement for a pre-determined period of time
+(identified in particular information)
+Absence detection may be linked with other control protocols
+as identified in particular information.
+Presence detection
+(Auto On/Auto OFF)
+Presence detection shall not require any human interaction to
+operate and shall switch on lighting when someone is detected
+in the controlled area.  Lighting shall then remain on for a pre-
+determined period of time unless further movement is
+detected in which case the pre-determined time period shall
+begin again.
+In large office spaces, presence detection may be linked to
+local override manual switching and appropriate zoning to give
+more local control and reduced energy use.
+Presence detection may be linked with other control protocols
+as identified in particular information.
+Daylight linking Daylight linking shall reduce or switch off luminaires when the
+level of natural light reaches a pre determined threshold.
+Daylight linking can be used in connection with presence
+detection.
+Constant illuminance
+adjustment
+Constant illuminance adjustment shall allow a luminaire or
+group of luminaires to adjust their output over time to allow for
+the deterioration of lamp and luminaire through age and build
+up of dirt.
+
+
+## Document 2, Page 26
+WSP Building Services Specification
+70051669
+7304010 Control panels
+7304011 Power supplies
+7304012 Installation and wiring
+7309000 Door access systems
+7309001 General requirements
+7309002 Electronic Security Contractor (ESC)
+7309003 Personnel
+7309004 Warning signage
+7309005 Developing the design
+7309006 System requirements
+7309007 Protocols
+7313000 Lighting control systems
+7313001 General
+7313002 Control types
+7313003 System types
+7313004 System protocol
+7313005 Head end and system control
+7313006 Control software
+7313007 Lighting control modules (LCM)
+7313008 Standalone detectors
+7313009 Networked detectors
+7313010 Integrated detectors
+7313011 Daylight linking
+7313012 Constant illuminance adjustment (CIA)
+7313013 Manual dimming
+7313014 Scene setting
+7313015 Wiring
+7313016 Commissioning
+
+## Document 2, Page 457
+WSP Building Services Specification
+70051669
+System documentation will be provided at contract completion and in a format compatible with
+the overall project record documentation.
+Operation and maintenance manuals
+A preliminary copy shall be made available to the CA in sufficient time for comments to be
+incorporated.
+The operation and maintenance manuals shall include but not limited to:
+1. A written description of plant operation
+2. Control strategy/logic diagrams recording the final version of configuration software installed
+3. Details of system application software configuration
+4. A points list including hard and soft points.  All points shall have a unique reference
+5. A description of user adjustable points
+6. Commissioning records and final commissioning report
+7. Detailed data sheets for all control components and equipment
+8. Wiring circuit details including origin, size, route and destination of each cable
+9. Diagrams showing the full diagrammatic (network structures, configuration diagrams, flow
+charts, outstations, peripherals etc) and physical layout of the controls system and
+components.
+10. Security management and access details
+11. Comprehensive instructions for switching on, daily operation, switching off, isolation, fault
+finding and procedures for dealing with emergency conditions
+12. Instructions for any precautionary measures necessary
+13. Instructions for the routine operation of the control system including simple day-to-day
+guidance for those operating the control system with limited technical skills
+14. Instructions for servicing and system upkeep
+15. A provision for update and modification
+16. Suppliers and spare parts references, contacts, telephone numbers, and addresses shall
+be supplied where relevant.
+5201021 Software
+Two complete sets, unless otherwise indicated, of all software developed by the Controls
+Specialist shall be provided for retention by the Employer.
+Allowance shall be made to up-date the software as maybe necessary during the one year
+defects period.
+Obtain on behalf of the end user all appropriate licences, permissions, copyright waivers, rights
+of use and the like from the owners of the software rights.  Ensure that the end user is properly
+registered with the software supplier for support and appropriate updating.
+Back-up copies of all system configuration files and master software disks shall be supplied in
+an appropriate lockable storage facility.  All system and data files shall be current as at the hand-
+over date, disks to be suitably identified and directories and files cross-referenced in the
+maintenance manuals.  In addition to the operating software, each disc will also contain a
+complete set of original set points for all conditions.  The storage unit and key shall be handed
+to the Employer at handover.
+A further copy of all master software, system configuration files etc shall be maintained off-site
+by the Controls Specialist for a minimum period of three years or as otherwise indicated.
+All passwords shall be provided at handover.
+5202000 BMS/AUTOMATIC CONTROLS – PARTICULAR REQUIREMENTS
+5202001 General requirements
+The Installer shall employ a BMS/controls specialist to design, supply, install and commission a
+complete and fully operational automatic controls system as indicated.
+
+## Document 2, Page 591
+WSP Building Services Specification
+70051669
+individual luminaire to meet the design level specified in the design criteria section of this
+specification.
+7313013 Manual dimming.
+Where indicated in the particular requirements of this specification, the facility to allow
+users to manually dim the lighting shall be provided This function shall override the
+automatic control and allow a user to adjust the lighting level between the automatic setting
+and zero.
+230/400V resistive dimmers shall not be used in any part of the installation.
+73130014 Scene setting
+Where indicated in the particular requirements of this specification, the facility to allow
+users to choose from a number of “scenes” shall be provided. Control shall be via a wall
+mounted control plate or via a remote control handset.
+The facility shall be provided to allow the end user to modify scenes on site without the
+need to call on the equipment manufacturer or purchase any additional hardware or
+software.
+All “scenes” shall be agreed with the CA prior to procurement of any equipment
+7313015 Wiring
+The lighting control system shall be wired as indicated in the particular requirements of this
+specification. Where ELV control systems are used, cables shall be suitably segregated
+from LV cables. All cables shall have LS0H sheaths and shall be installed in accordance
+with this specifications section on cable installation as well as BS 7671.
+7313016 Commissioning
+The contractor shall allow sufficient time prior to PC to fully commission the lighting control
+system which shall be handed over in a fully functional state.
+The commissioning process shall fully prove and put to work:
+· All manual switching functions
+· All automatic switching functions
+· All control devices
+The commissioning process shall fully prove that any computer hardware, firmware or
+software is stable, reliable, predictable and upgradable.
+The commissioning process shall include a 7 day soak test of the entire completed system
+after which any faults shall be fully investigated and a report presented to the CA with
+solutions and details of remedial works carried out.  The CA shall have the authority to
+require any subsequent 7 day soak tests at the contractor’s expense and before PC is
+granted if assurance cannot be given that any identified faults will not re-occur.
+
+## Document 2, Page 175
+WSP Building Services Specification
+70051669
+terminal shall be marked with its size and air quantity flowing.  Each terminal unit or grille
+shall have its duty clearly shown as recorded from the commissioning results.
+· The location and identity of each room including space housing plant, machinery or
+apparatus.
+· Detailed general arrangements of all boiler houses, machinery spaces, air handling plant
+rooms, tank rooms, electrical switch-room and other plant or apparatus, including the
+location, identity, manufacturer, size and rating of each item.
+· All necessary sections, elevations, isometrics and schematics of the plant spaces.
+· Control and wiring diagrams shall be provided incorporating details of each instrument
+and equipment item and written description of the sequence of operation of each system.
+All diagrams shall include full details of internal panel wiring and connections to field
+mounted items.
+· Layout, location and extent of electrical switchgear, distribution boards cables and
+termination points.
+· Detailed general arrangements of all switch-rooms, riser cupboards, service trenches,
+transformer chambers, generator rooms and other plant or apparatus, including the
+location, identity, manufacturer, size and rating of each apparatus
+· Details to show inter-connections between the works and equipment or systems provided
+by others to which wiring and connections are carried out as part of the works
+· Detailed wiring drawings and diagrams for all systems showing origin, route, cable
+containment size, type and number of conductors, length termination size and
+identification, and measured conductor and earth continuity resistance of each circuit.
+Indicate if cable/conduit is surface mounted, concealed in wall chase, in floor screed,
+cast in-situ, in false floor, above ceiling void, etc.
+· Logic flow diagrams for each individual control or monitoring specification and for each
+engineering system to illustrate the logical basis of the software design
+1015014 Builders work drawing and information
+Drawings and/or schedules, appropriate to the stage of design development showing the
+requirements for architectural and/or structural provisions necessary to facilitate the
+engineering services and allow their integration into the project.  Such information includes
+the position and sizes of all access covers, panels and doors required in the building structure
+and fabric for proper safe access for and to plant for installation, maintenance, inspection
+and future replacement.
+Design stage
+A drawing and/or schedule to show the provisions required to accommodate the engineering
+services that significantly affect the design of the building structure,fabric and external works.
+The information also indicates the work to be carried out by building trades eg. plant bases,
+major openings and major structures for plant and equipment.
+This will be appropriate to the stage of design development and maybe based on preliminary,
+non-manufacturer specific plant selection.
+Installation stage
+Drawings to show requirements for building works necessary to facilitate the installation of
+the engineering services and as described elsewhere.
+1015015 Controls logic diagrams
+Diagrams, drawings and/or schematic details of all control components and instruments
+showing the layout with each item uniquely identified together with a description of the
+controls operation and details of the associated interlocking.
+Switchgear, starter and control instrumentation panel drawings
+Drawings that show the construction and internal wiring diagrams of the starters, panels
+and/or other devices.
+1016000 RECORD DOCUMENTATION
+1016001 General
+
