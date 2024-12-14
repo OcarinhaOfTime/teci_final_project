@@ -27,6 +27,10 @@ def semantic_search(emb, lim=10):
     query = f"SELECT * FROM bcorpus ORDER BY embedding <-> '{emb}' LIMIT {lim};"
     return execute_query(query, fetch=True)
 
+def retrieve(doc, page):
+    query = f"SELECT * FROM bcorpus WHERE doc={doc} AND page={page-1}"
+    return execute_query(query, fetch=True)[0]
+
 def setup_pg():
     print('Setting up postgres')
     parsed_folder = '../BData/parsed_data/'

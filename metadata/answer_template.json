@@ -1,5 +1,6 @@
 {
     "page":0,
     "doc":0,
-    "answer":"This is an example answer."
+    "answer":"This is an example answer.",
+    "answer_exists_in_context":true
 }

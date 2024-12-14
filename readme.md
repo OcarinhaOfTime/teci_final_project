@@ -11,3 +11,5 @@ Being technical documents, the vocabulary and semantics associated with the afor
 * Parse the PDFS
 * Create embeddings
 * Syntax search
+
+## Project Description
