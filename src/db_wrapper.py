@@ -1,5 +1,5 @@
 import psycopg2, json
-conn_str = "dbname=emb user=vagner"
+conn_str = "dbname=emb user=henry"
 
 def execute_query(query, commit=False, fetch=False):
     conn = psycopg2.connect(conn_str)
