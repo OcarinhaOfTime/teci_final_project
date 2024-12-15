@@ -27,14 +27,14 @@ for i in range(len(pdf_paths)):
     reader = PdfReader(pdf_path)
     number_of_pages = len(reader.pages)
     txt = separator.join([page.extract_text() for page in reader.pages])
-    open(f'{parsed_folder}{i}.txt', 'w+').write(txt)
+    open(f'{parsed_folder}{i}.txt', 'w+', encoding="utf-8").write(txt)
 
 print('Creating embeddings...')
 # Create db
 min_thres = 500
 corpus = []
 for i in range(len(pdf_paths)):
-    txt = open(f'../BData/parsed_data/{i}.txt').read()
+    txt = open(f'../BData/parsed_data/{i}.txt', encoding="utf-8").read()
     pages = txt.split(separator)
     for k, txt in zip(range(len(pages)), pages):
         if len(txt) < min_thres:
@@ -52,6 +52,6 @@ for i in range(len(pdf_paths)):
             }
         )
 
-open(f'{parsed_folder}corpus.json', 'w+').write(json.dumps(corpus))
+open(f'{parsed_folder}corpus.json', 'w+', encoding="utf-8").write(json.dumps(corpus))
 
 
