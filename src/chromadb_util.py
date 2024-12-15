@@ -1,7 +1,11 @@
 import chromadb, json
 import chromadb.utils.embedding_functions as embedding_functions
 import re
+import google.generativeai as genai
 
+def set_gemini_auth():
+    api_key = open('../auth/gemini_key.txt').read()
+    genai.configure(api_key=api_key)
 
 def semantic_search(query):
     client = chromadb.HttpClient(host='localhost', port=8000)
@@ -14,8 +18,14 @@ def semantic_search(query):
         query_texts=[query],
         n_results=3
     )
-    print("kkk ", results['metadatas'][0])
+
     return(results)
+
+def gemini_ask(prompt):
+    set_gemini_auth()
+    model = genai.GenerativeModel("gemini-1.5-flash")
+    return model.generate_content(prompt)
+
 
 def compose_info(db_answer):
     info = ''
@@ -26,7 +36,6 @@ def compose_info(db_answer):
         info += '\n'
         # print("mmm ", document)
     
-    print(info)
     return info
 
 def extract_json(txt):
