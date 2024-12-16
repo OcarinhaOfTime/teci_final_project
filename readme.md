@@ -7,18 +7,24 @@ Being technical documents, the vocabulary and semantics associated with the afor
 
 
 ## Data Analysis
-The data used in this study is proprietary and contains sensitive information, some of which has been disclosed. The available files lack standardized conventions in terms of content, naming, hierarchy, or file type. From the dataset, 609 PDF files were extracted, and their textual information was subsequently processed using the PyPDF library. A pre-processing step was then performed, which involved splitting the text into manageable chunks, creating embeddings for these chunks, and storing them in a persistent database for future retrieval and analysis.
+The data used in this study is proprietary and contains sensitive information, some of which has been disclosed. The available files lack standardized conventions in terms of content, naming, hierarchy, or file type. 
+
+From the total of 1918 files in the dataset, 609 PDF arquives were extracted, and their textual information was subsequently processed using the **PyPDF** library.
+
+A pre-processing step was then performed, which involved splitting the text into manageable chunks, creating embeddings for these chunks, and storing them in a persistent database for future retrieval and analysis.
 
 ## Project Structure
-The project functions as a service that provides users with information and document retrieval through a chat bot.
+The project operates as a service designed to provide users with information retrieval and document access via a chatbot.
 
-The following figure illustrates the overall organization of the project:
+The figure below illustrates the overall architecture of the project:
 
 <img src="img/Estrutura-Projeto-RAG.png" alt="Project Structure" style="width:50%; height:auto;">
 
-CHROMADB was selected as the database solution, as it offers an efficient method for embedding textual information. The RAG system itself was built using Gemini, which was employed for both generating embeddings and as the core component for constructing prompts, all implemented in Python.
+For the database solution, **CHROMADB** was chosen due to its efficiency in embedding textual information. The Retrieval-Augmented Generation (RAG) system was developed using **Gemini**, which was leveraged for both generating embeddings and constructing prompts. All components of the RAG system were implemented in Python.
 
-User interactions occur through a Telegram chatbot, developed using BLIP, which manages the front-end of the application. The flowchart below illustrates the structure and organization of the chatbot.
+To facilitate integration with the web framework, **Flask** was selected for its simplicity and lightweight nature.
+
+User interactions are conducted through a **Telegram** chatbot, developed using **BLIP**, which serves as the front-end interface for the application. The flowchart below outlines the structure and organization of the chatbot:
 
 <img src="img/Estrutura-Bot-RAG.png" alt="Project Structure" style="width:50%; height:auto;">
 
