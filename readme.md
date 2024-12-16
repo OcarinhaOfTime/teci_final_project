@@ -5,6 +5,14 @@ The sheer amount of documents makes it difficult to manually find critical infor
 
 Being technical documents, the vocabulary and semantics associated with the aforementioned data can be rather distinct, with a prevalence of terms and abbreviations that are exclusive to buildings and their respective equipment and contractors. Henceforth, the creation of embeddings might require special treatment to account for their distinctiveness compared to natural language. Furthermore, a hybrid search might be considered, given that the myriad of domain specific terms can potentially hinder an approach that relies solely on semantic searching.
 
+## Important Files
+* GML__Presentation.pd: Contains the presentation for the assignment.
+* src/rag.py: the core implementation of the RAG
+* src/db_wrapper.py contains all the database operations used to handle the embbeded data for the files.
+
+Note: Locally, PostgreSQL was used, and it is the db vector solution for the metrics gathered.
+Due to issues regarding the implementation, ChromaDB was used for the chat bot version.
+
 
 ## Data Analysis
 The data used in this study is proprietary and contains sensitive information, some of which has been disclosed. The available files lack standardized conventions in terms of content, naming, hierarchy, or file type. 
