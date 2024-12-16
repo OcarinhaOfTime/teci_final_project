@@ -119,9 +119,9 @@ class Rag:
 
 
 if __name__ == "__main__":
-    i = 3
+    i = 4
     query = 'What is the maximum rating for RCBO in the small power system?'
-    query = 'What are the two programming methods used for QUANTEC?'
+    #query = 'What are the two programming methods used for QUANTEC?'
     rag = Rag()
     report = rag.execute(query)
     open(f'../tmp/report{i}.md', 'w+').write(report)

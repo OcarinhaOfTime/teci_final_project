@@ -1,0 +1,37 @@
+Creating embedding...
+The maximum rated current for RCBOs (Residual Current Breaker with Overload protection) employed within the small power system is dictated by several factors and is not a single, universally applicable value.  Specifically, the selection must adhere to the system's upstream protective device ratings and the anticipated load characteristics.  The maximum permissible current rating for an individual RCBO shall not exceed the rated current of the protective device immediately upstream in the circuit.  This is crucial for ensuring proper coordination and preventing nuisance tripping.  Consult the relevant wiring regulations (e.g., IEC 60364, NEC) for specific guidance based on the installation's location and type.
+
+Furthermore, the RCBO's rated current must also be appropriate for the connected load.  Oversizing an RCBO can lead to hazardous situations in the event of a fault, while undersizing will result in frequent nuisance tripping.  The selection process should consider the maximum expected current draw of all appliances and equipment connected downstream of the RCBO, applying appropriate derating factors as outlined in applicable standards to account for ambient temperature, installation method, and other environmental factors.  In summary, determining the maximum allowable RCBO rating requires a careful assessment of the entire circuit and its operational parameters.
+
+Specific maximum ratings within this small power system architecture are further constrained by available inventory and procurement specifications.  Currently, the system supports RCBOs with maximum current ratings of 20A for Type A and 30A for Type B.  However, future system upgrades may permit higher ratings provided that relevant safety and coordination studies are performed to validate compatibility with the existing infrastructure and protection strategy.  Deviation from these specifications requires formal change control procedures and appropriate engineering justification.
+
+semantic search...
+data used:
+   Doc  Page
+0    5   543
+1   19    26
+2    5   542
+3    5    68
+4    5   544
+5    5    74
+6    5    88
+7    5   541
+8   19    10
+9    5    22
+Asking gemini...
+received answer
+{
+  "page": 26,
+  "doc": 19,
+  "answer": "The rating of RCBOs does not exceed 30mA for residual currents.",
+  "answer_exists_in_context": true
+}
+validating...
+```json
+{
+  "acceptable": true,
+  "explanation": "This answer is acceptable because the provided text explicitly states, \"The rating of RCBOs does not exceed 30mA for residual currents.\"  The question asks for the maximum rating, and the answer correctly identifies the maximum residual current rating for RCBOs within the described small power system."
+}
+```
+
+finished!
