@@ -12,7 +12,9 @@ The data used in this study is proprietary and contains sensitive information, s
 ## Project Structure
 The following figure illustrates how the project was organized:
 
--------- figure here --------
+![Project Structure](img/Estrutura-Projeto-RAG.png)
+![Bot Structure](img/Estrutura-Bot-RAG.png)
+![RAG Structure](img/Estrutura-Basica-RAG.png)
 
 The user interacts with a bot made using BLIP, which handles the front end of the application.
 CHROMADB was the database solution of choice, for providing a convenient way to embed the textual information.
