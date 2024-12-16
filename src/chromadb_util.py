@@ -16,7 +16,7 @@ def semantic_search(query):
 
     results = collection.query(
         query_texts=[query],
-        n_results=3
+        n_results=10
     )
 
     return(results)
