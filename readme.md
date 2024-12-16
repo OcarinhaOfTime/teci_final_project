@@ -12,4 +12,23 @@ Being technical documents, the vocabulary and semantics associated with the afor
 * Create embeddings
 * Syntax search
 
-## Project Description
+## Data Analysis
+The data belongs to a private client, and some of its core contents are disclosed.
+From all the files avvailable, their content, naming, hierarchy or file type lack any helpful convention.
+We extracted 609 pdf files from the dataset, and their textual information was later extracted using the pypdf library.
+
+
+## Project Structure
+The following figure illustrates how the project was organized:
+
+-------- figure here --------
+
+The user interacts with a bot made using BLIP, which handles the front end of the application.
+CHROMADB was the database solution of choice, for providing a convenient way to embed the textual information.
+The RAG itself was made using gemini for both the generation of embeddings as for the backbone of the prompts.
+
+## RAG
+
+## Results
+
+## Conclusions
