@@ -13,35 +13,57 @@ app.config['JSON_SORT_KEYS'] = False
 def get_answer():
     #get parameters
     query = request.args.get('text')
+    show_documents = request.args.get('showDocuments')
 
     #semantic search request to get context to llm
     results = semantic_search(query)
-    answer = {"documents": [{"text": txt, "distance": distance, "information": metadata} for idx, (txt,distance, metadata) in enumerate(zip(results['documents'][0], results['distances'][0], results['metadatas'][0]))]}
+    documents_answer = {"documents": [{"text": txt, "distance": distance, "information": metadata} for idx, (txt,distance, metadata) in enumerate(zip(results['documents'][0], results['distances'][0], results['metadatas'][0]))]}
 
-    prompt_info = compose_info(answer['documents'])
-    answer["prompt_info"] = prompt_info
+    prompt_info = compose_info(documents_answer['documents'])
+
+    query_transform_template = open('../metadata/query_transform_template.md').read()
+    query_ans_template = open('../metadata/transform_answer_template.json').read()
+    transform_prompt = query_transform_template.format(query=query, ans_template=query_ans_template)
+    gemini_transform = gemini_ask(transform_prompt)
+    transform_json = json.dumps(json.loads(extract_json(gemini_transform.text)))
 
     #load prompt templates
-    template = open('../metadata/template.md').read()
+    template = open('../metadata/template.md').read()   
     ans_template = open('../metadata/answer_template.json').read()
     prompt = template.format(query=query, ans_template=ans_template, info=prompt_info)
-    answer["prompt"] = prompt
 
     #gemini llm request
     gemini_answer = gemini_ask(prompt)
 
     #precessing gemini answer
     gemini_json = json.dumps(json.loads(extract_json(gemini_answer.text)))
-    answer["gemini_answer"] = json.loads(gemini_json)
+
+    #generate json response
+    if show_documents:
+        answer = {
+            "gemini_answer": json.loads(gemini_json),
+            "gemini_query_transform": json.loads(transform_json),
+            "prompt": prompt,
+            "prompt_info": prompt_info,
+            "documents": documents_answer['documents']
+        }
+    else:
+        answer = {
+            "gemini_answer": json.loads(gemini_json),
+            "gemini_query_transform": json.loads(transform_json),
+            "prompt": prompt,
+            "prompt_info": prompt_info
+        }
 
     return jsonify(answer)
 
-@app.route('/validation', methods=['GET'])
+@app.route('/validation', methods=['POST'])
 def get_validation():
     #get parameters
-    query = request.args.get('text')
-    answer = request.args.get('answer')
-    context = request.args.get('context')
+    data = request.get_json()
+    query = data['text']
+    answer = data['answer']
+    context = data['context']
 
     #load prompt templates
     template = open('../metadata/validation_template.md').read()
@@ -53,12 +75,13 @@ def get_validation():
 
     return jsonify(json.loads(extract_json(gemini_answer.text)))
 
-@app.route('/anotherAnswer', methods=['GET'])
+@app.route('/anotherAnswer', methods=['POST'])
 def get_another_answer():
     #get parameters
-    query = request.args.get('text')
-    wrong_answer = request.args.get('answer')
-    context = request.args.get('context')
+    data = request.get_json()
+    query = data['text']
+    wrong_answer = data['answer']
+    context = data['context']
 
     #load prompt templates
     template = open('../metadata/another_answer_template.md').read()
