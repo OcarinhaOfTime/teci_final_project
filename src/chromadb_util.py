@@ -16,14 +16,14 @@ def semantic_search(query):
 
     results = collection.query(
         query_texts=[query],
-        n_results=10
+        n_results=100
     )
 
     return(results)
 
 def gemini_ask(prompt):
     set_gemini_auth()
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-1.5-flash-latest")
     return model.generate_content(prompt)
 
 
