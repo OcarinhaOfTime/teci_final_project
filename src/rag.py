@@ -7,19 +7,21 @@ import pandas as pd
 
 class Rag:
     def __init__(self):
+        self.verbose = False
         gemini.configure()        
         self.ts = datetime.strftime(datetime.now(), '%y-%b-%d')
-        self.context_size = 10 #pages
+        self.context_size = 100 #pages
 
     def log(self, txt):
-        print(txt)
+        if self.verbose:
+            print(txt)
         open(f'../logs/{self.ts}.txt', 'a+').write(txt + '\n')
 
     def log_data(self, txt):
         open(f'../logs/{self.ts}_data.txt', 'a+').write(txt + '\n')
 
     def compose_query_transform(self, query):
-        template = open('../metadata/query_transform_template.md').read()
+        template = open('../metadata/query_transform_template_simple.md').read()
         prompt = template.format(query=query)
         return prompt
 
@@ -71,10 +73,8 @@ class Rag:
         return m.group(1).strip()    
 
     def generate_sample_answer(self, query):
-        print('Generating sample answer...')
         prompt = self.compose_query_transform(query)
         answer = gemini.ask(prompt)
-        print(answer)
 
         return answer    
 
@@ -102,26 +102,41 @@ class Rag:
         #validation
         self.log('validating...')
         js_answer = json.loads(answer)
+        if not js_answer['answer_exists_in_context']:
+            self.log('Answer not in context')
+            js_answer['valid'] = False
+            return js_answer
+        
         answer = js_answer['answer']
-        _, _, _, context, _ = db.retrieve(js_answer['doc'], js_answer['page'])
+        self.log(f'retrieving context doc {js_answer['doc']}, page: {js_answer['page']}')
+
+        try:
+            _, _, _, context, _ = db.retrieve(js_answer['doc'], js_answer['page'])
+        except:
+            self.log('Could not retrieve context from DB')
+            js_answer['valid'] = False
+            return js_answer
 
         val_prompt = self.compose_val_prompt(query, answer, context)        
         val_answer = gemini.ask(val_prompt)
+        val_js = json.loads(self.extract_json(val_answer))
 
         valid = self.compose_validation_report(val_answer)
         report_template = open('../metadata/report_template.md').read()
         report = report_template.format(query=query, answer=answer, context=context, valid=valid)
         self.log(val_answer)
         self.log('finished!')
-        return report
+
+        js_answer['valid'] = val_js['acceptable']
+        return js_answer
 
 
 
 
 if __name__ == "__main__":
-    i = 4
+    i = 0
     query = 'What is the maximum rating for RCBO in the small power system?'
     #query = 'What are the two programming methods used for QUANTEC?'
     rag = Rag()
     report = rag.execute(query)
-    open(f'../tmp/report{i}.md', 'w+').write(report)
+    open(f'../tmp/answer{i}.json', 'w+').write(json.dumps(report))
