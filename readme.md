@@ -26,7 +26,7 @@ The project operates as a service designed to provide users with information ret
 
 The figure below illustrates the overall architecture of the project:
 
-<img src="img/Estrutura-Projeto-RAG.png" alt="Project Structure" style="width:50%; height:auto;">
+<img src="img/Estrutura-Projeto.png" alt="Project Structure" style="width:50%; height:auto;">
 
 For the database solution, **CHROMADB** was chosen due to its efficiency in embedding textual information. The Retrieval-Augmented Generation (RAG) system was developed using **Gemini**, which was leveraged for both generating embeddings and constructing prompts. All components of the RAG system were implemented in Python.
 
@@ -34,7 +34,7 @@ To facilitate integration with the web framework, **Flask** was selected for its
 
 User interactions are conducted through a **Telegram** chatbot, developed using **BLIP**, which serves as the front-end interface for the application. The flowchart below outlines the structure and organization of the chatbot:
 
-<img src="img/Estrutura-Bot-RAG.png" alt="Project Structure" style="width:50%; height:auto;">
+<img src="img/Estrutura-Bot-Blip.png" alt="Bot Structure" style="width:50%; height:auto;">
 
 
 ## RAG
@@ -53,7 +53,7 @@ The following steps outline the organization of the Retrieval-Augmented Generati
 
 This process combines retrieval-based techniques with generative models to improve the accuracy and relevance of the responses, with a built-in validation step to minimize errors and ensure quality results.
 
-<img src="img/Estrutura-Basica-RAG.png" alt="Project Structure" style="width:50%; height:auto;">
+<img src="img/Estrutura-RAG.png" alt="Rag Structure" style="width:50%; height:auto;">
 
 ## Results
 To evaluate the performance of the system, 100 questions and answers were generated from text chunks extracted from various documents within the dataset. Each of these questions was submitted to our RAG system, and the resulting answers were compared to the generated responses. The RAG system identified 93% of the answers as valid, meaning it was confident that the correct answer had been found.
