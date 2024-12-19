@@ -43,7 +43,7 @@ The following steps outline the organization of the Retrieval-Augmented Generati
 
 * Query Transformation: The user's input query is transformed into a sample answer by Gemini. This answer is subsequently used to create an embedding, which represents the semantic meaning of the transformed query.
 
-* Syntactic Search: A syntactic search is performed to identify the top 100 relevant chunks. These selected chunks are then utilized as the context for answering the question.
+* Semantic Search: A semantic search is performed to identify the top 100 relevant chunks. These selected chunks are then utilized as the context for answering the question.
 
 * Prompt Composition: A structured template is populated with the query, context, formatting instructions, and the desired output format (in JSON). This complete prompt is sent to Gemini for response generation.
 
