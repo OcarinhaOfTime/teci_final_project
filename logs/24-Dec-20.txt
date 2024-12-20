@@ -1,0 +1,119 @@
+Creating embedding...
+QUANTEC utilizes two distinct programming methodologies to facilitate application development and system control: a high-level scripting language and a low-level register-based programming interface.  The high-level scripting language, designated as QSL (QUANTEC Scripting Language), provides a user-friendly environment for rapid prototyping and the implementation of complex control algorithms.  QSL features a syntax reminiscent of Python, incorporating familiar constructs such as loops, conditional statements, and function definitions.  This approach minimizes the development time for common tasks and allows for easier integration with external data sources and analysis tools.  Comprehensive documentation, including a library of pre-built functions and examples, is available to support QSL development.
+
+Conversely, for applications demanding maximum performance and fine-grained control over hardware resources, QUANTEC offers a low-level register-based interface.  Access is provided through a dedicated Application Programming Interface (API),  documented in detail within the QUANTEC Low-Level Programming Guide.  This interface allows direct manipulation of individual hardware registers, enabling optimization at the bit level.  While more challenging to implement than QSL, this method is crucial for applications requiring precise timing or the direct control of specialized hardware peripherals.  Programmers utilizing this interface are required to possess a thorough understanding of the QUANTEC architecture and hardware specifications, as described in Section 3.2 of this document.  Appropriate debugging tools and system monitoring capabilities are also detailed within the aforementioned guide.
+
+semantic search...
+data used:
+    Doc  Page
+0   524     4
+1   225     4
+2   407     4
+3   578     4
+4   112     4
+..  ...   ...
+95  434    50
+96  605    50
+97  139    50
+98  482    50
+99  548     7
+
+[100 rows x 2 columns]
+Asking gemini...
+received answer
+{
+  "page": 2,
+  "doc": 188,
+  "answer": "Script and Function Block",
+  "answer_exists_in_context": true
+}
+validating...
+retrieving context doc 188, page: 2
+```json
+{
+  "acceptable": true,
+  "explanation": "The answer correctly identifies Script and Function Block as the two programming methods available in AS-P, as explicitly stated in the provided text: \"Unique to the industry, AS-P has both Script and Function Block programming options.\""
+}
+```
+
+finished!
+Creating embedding...
+QUANTEC supports two distinct programming methodologies for application development:  a high-level, declarative approach utilizing the QUANTEC Application Language (QAL), and a low-level, imperative approach leveraging the QUANTEC Native Interface (QNI).  QAL is designed for rapid prototyping and ease of use, abstracting away many of the low-level hardware details.  Its syntax is based on a modified subset of Python, prioritizing readability and minimizing the learning curve for developers familiar with scripting languages.  QAL applications are compiled into optimized intermediate representations before execution on the QUANTEC runtime environment.  This compilation process allows for efficient resource management and performance optimization.
+
+Conversely, the QNI provides direct access to QUANTEC's underlying hardware architecture and lower-level functionalities.  It is implemented as a C++ library, offering granular control over memory allocation, processor registers, and specialized QUANTEC instructions.  Programmers using QNI are responsible for managing all aspects of the application's lifecycle, from memory management to error handling. While more complex to master, QNI allows for fine-grained performance tuning and access to features not exposed through the higher-level QAL abstraction.  Applications written using QNI require a thorough understanding of the QUANTEC hardware specifications and are typically utilized for performance-critical applications or when specialized hardware features are required.  Both QAL and QNI are fully documented in the accompanying developer manuals and API specifications.  The choice between these two methodologies depends largely on the specific requirements of the application and the developer's expertise.
+
+semantic search...
+data used:
+    Doc  Page
+0   307     2
+1   253     2
+2   606     2
+3   483     2
+4   188     2
+..  ...   ...
+95  431     1
+96  136     1
+97  249     1
+98  184     1
+99  602     1
+
+[100 rows x 2 columns]
+Asking gemini...
+received answer
+{
+  "page": 2,
+  "doc": 19,
+  "answer": "Script and Function Block",
+  "answer_exists_in_context": true
+}
+validating...
+retrieving context doc 19, page: 2
+```json
+{
+  "acceptable": false,
+  "explanation": "The provided text is a table of contents for a building user guide.  It does not contain information about QUANTEC or its programming methods. Therefore, the answer is not acceptable because it's based on information not present in the context."
+}
+```
+
+finished!
+Creating embedding...
+The maximum rated current for RCBOs (Residual Current Breaker with Overload protection) within the small power system is dependent on several factors, primarily the upstream protective device rating and the specific wiring configuration.  As per Section 3.2.4 of the system design specifications (Document Ref: SYS-DES-001), the maximum permissible RCBO rating is 63A for all branch circuits. This limit ensures adequate protection against overcurrent and fault conditions while maintaining compatibility with the 100A main switchboard breaker.  Exceeding this rating may lead to inadequate protection or potential cascading failures within the system.
+
+Selection of an RCBO with a rating exceeding 63A requires prior approval from the project lead engineer and a detailed justification outlining the specific needs and mitigating measures for potential risks.  This justification must include a comprehensive short-circuit calculation (per Annex A of this document) demonstrating the system's capacity to withstand the increased fault current associated with higher-rated RCBOs.  Any deviation from the specified 63A maximum must be documented in the individual circuit design specifications and approved via the change management process outlined in Procedure DOC-CM-003.
+
+Furthermore, the selection of RCBOs must adhere to the relevant safety standards (IEC 61008-1 and BS EN 61009-1), ensuring compatibility with the system’s nominal voltage of 230V AC.  Incorrect selection of RCBO ratings could result in system instability, increased risk of fire, or failure to protect connected equipment.  Therefore, strict adherence to the 63A maximum rating, unless explicitly approved via the exception process detailed above, is mandatory for all RCBO installations within the small power system.
+
+semantic search...
+data used:
+    Doc  Page
+0     5   543
+1     5    68
+2     5   542
+3    19    26
+4     5   544
+..  ...   ...
+95  192    21
+96  257    21
+97  556    21
+98    5   425
+99    5   530
+
+[100 rows x 2 columns]
+Asking gemini...
+received answer
+{
+  "page": 26,
+  "doc": 19,
+  "answer": "30mA",
+  "answer_exists_in_context": true
+}
+validating...
+retrieving context doc 19, page: 26
+```json
+{
+  "acceptable": true,
+  "explanation": "The provided text explicitly states that \"The rating of RCBOs does not exceed 30mA for residual currents.\"  Therefore, 30mA is the correct answer to the question about the maximum rating for RCBOs in the described small power system."
+}
+```
+
+finished!

@@ -78,7 +78,8 @@ class Rag:
 
         return answer    
 
-    def execute(self, query):
+    def execute(self, query, verbose=False):
+        self.verbose = verbose
         self.log('Creating embedding...')
         trans_query = self.generate_sample_answer(query)        
         self.log(trans_query)
@@ -138,5 +139,5 @@ if __name__ == "__main__":
     query = 'What is the maximum rating for RCBO in the small power system?'
     #query = 'What are the two programming methods used for QUANTEC?'
     rag = Rag()
-    report = rag.execute(query)
+    report = rag.execute(query, True)
     open(f'../tmp/answer{i}.json', 'w+').write(json.dumps(report))
