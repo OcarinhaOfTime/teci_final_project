@@ -5,6 +5,14 @@ The sheer amount of documents makes it difficult to manually find critical infor
 
 Being technical documents, the vocabulary and semantics associated with the aforementioned data can be rather distinct, with a prevalence of terms and abbreviations that are exclusive to buildings and their respective equipment and contractors. Henceforth, the creation of embeddings might require special treatment to account for their distinctiveness compared to natural language. Furthermore, a hybrid search might be considered, given that the myriad of domain specific terms can potentially hinder an approach that relies solely on semantic searching.
 
+## Important Files
+* GML__Presentation.pd: Contains the presentation for the assignment.
+* src/rag.py: the core implementation of the RAG
+* src/db_wrapper.py contains all the database operations used to handle the embbeded data for the files.
+
+Note: Locally, PostgreSQL was used, and it is the db vector solution for the metrics gathered.
+Due to issues regarding the implementation, ChromaDB was used for the chat bot version.
+
 
 ## Data Analysis
 The data used in this study is proprietary and contains sensitive information, some of which has been disclosed. The available files lack standardized conventions in terms of content, naming, hierarchy, or file type. 
@@ -18,7 +26,7 @@ The project operates as a service designed to provide users with information ret
 
 The figure below illustrates the overall architecture of the project:
 
-<img src="img/Estrutura-Projeto-RAG.png" alt="Project Structure" style="width:50%; height:auto;">
+<img src="img/Estrutura-Projeto.png" alt="Project Structure" style="width:50%; height:auto;">
 
 For the database solution, **CHROMADB** was chosen due to its efficiency in embedding textual information. The Retrieval-Augmented Generation (RAG) system was developed using **Gemini**, which was leveraged for both generating embeddings and constructing prompts. All components of the RAG system were implemented in Python.
 
@@ -26,7 +34,7 @@ To facilitate integration with the web framework, **Flask** was selected for its
 
 User interactions are conducted through a **Telegram** chatbot, developed using **BLIP**, which serves as the front-end interface for the application. The flowchart below outlines the structure and organization of the chatbot:
 
-<img src="img/Estrutura-Bot-RAG.png" alt="Project Structure" style="width:50%; height:auto;">
+<img src="img/Estrutura-Bot-Blip.png" alt="Bot Structure" style="width:50%; height:auto;">
 
 
 ## RAG
@@ -35,7 +43,7 @@ The following steps outline the organization of the Retrieval-Augmented Generati
 
 * Query Transformation: The user's input query is transformed into a sample answer by Gemini. This answer is subsequently used to create an embedding, which represents the semantic meaning of the transformed query.
 
-* Syntactic Search: A syntactic search is performed to identify the top 100 relevant chunks. These selected chunks are then utilized as the context for answering the question.
+* Semantic Search: A semantic search is performed to identify the top 100 relevant chunks. These selected chunks are then utilized as the context for answering the question.
 
 * Prompt Composition: A structured template is populated with the query, context, formatting instructions, and the desired output format (in JSON). This complete prompt is sent to Gemini for response generation.
 
@@ -45,7 +53,7 @@ The following steps outline the organization of the Retrieval-Augmented Generati
 
 This process combines retrieval-based techniques with generative models to improve the accuracy and relevance of the responses, with a built-in validation step to minimize errors and ensure quality results.
 
-<img src="img/Estrutura-Basica-RAG.png" alt="Project Structure" style="width:50%; height:auto;">
+<img src="img/Estrutura-RAG.png" alt="Rag Structure" style="width:50%; height:auto;">
 
 ## Results
 To evaluate the performance of the system, 100 questions and answers were generated from text chunks extracted from various documents within the dataset. Each of these questions was submitted to our RAG system, and the resulting answers were compared to the generated responses. The RAG system identified 93% of the answers as valid, meaning it was confident that the correct answer had been found.
